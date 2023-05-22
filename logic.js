@@ -27,6 +27,10 @@ function boxClick(e) {
         }
 
         currentPlayer = currentPlayer === X_TEXT ? O_TEXT : X_TEXT;
+        if (boardVal.every(box => box !== null)) {
+            headTxt.innerText = "It's a tie!";
+            return;
+        }
     }
 }
 
